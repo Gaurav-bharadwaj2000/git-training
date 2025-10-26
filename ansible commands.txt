@@ -1,0 +1,226 @@
+ sudo dnf install ansible -y
+  851  ansible --version
+  852  clear
+  853  ansible --version
+  854  cd /etc/ansible/
+  855  ls
+  856  vi hosts
+  857  ansible all --list-hosts
+  858  ansible all --list-hosts -vvvv
+  859  cd /etc/ansible/
+  860  ls
+  861  vi hosts
+  862  ansible all --list-hosts
+  863  clear
+  864  ansible all --list-hosts
+  865  ansible all -m ping
+  866  ssh root@10.241.92.46
+  867  ssh-copy-id root@10.241.92.46
+  868  ansible all -m ping -u root -k
+  869  ssh-keygen
+  870  ssh-copy-id root@10.241.92.46
+  871  ssh-copy-id root@10.241.92.47
+  872  ssh-copy-id root@10.241.92.48
+  873  ssh-copy-id root@10.241.92.49
+  874  ssh root@10.241.92.46
+  875  ssh root@10.241.92.47
+  876  ssh root@10.241.92.48
+  877  ssh root@10.241.92.49
+  878  ansible all --list-hosts
+  879  ansible all -m ping
+  880  ssh root@10.241.92.47
+  881  ping 10.241.216.163
+  882  cd /etc/ansible/
+  883  ls
+  884  vi hosts
+  885  ansible all --list-hosts
+  886  ssh-copy-id root@10.241.216.163
+  887  ssh-copy-id admin@10.241.216.163
+  888  ansible all --list-hosts -u admin -k
+  889  ansible 10.241.216.163 --list-hosts -u admin -k
+  890  ansible 10.241.216.163 -m admin -k
+  891  ansible 10.241.216.163 -m ping -u admin -k
+  892  ansible 10.241.216.163 -m ping
+  893  ansible all -m ping
+  894  ansible all -m ping --ask-pas
+  895  ansible all -m ping --ask-pass
+  896  cd /etc/ansible/
+  897  ls
+  898  vi ansible.cfg
+  899  cd /etc/ansible/
+  900  ls
+  901  vi hosts
+  902  ansible all --list-host
+  903   ssh-copy-id root@10.241.216.163
+  904  ssh-copy-id root@10.241.7.230
+  905  ssh-copy-id service@10.241.7.230
+  906  ansible all --list-host
+  907  ansible 10.241.7.230 -m ping -u service -k
+  908  ansible 10.241.7.230 -m ping -u admin -k
+  909  ansible -m ping -u admin -k
+  910  ansible all -m ping -u admin -k
+  911  ansible all -m ping
+  912  ping 10.241.7.230
+  913  vi hosts
+  914  ansible all -m ping
+  915  ls
+  916  cd ..
+  917  cd ~
+  918  ls
+  919  cd /
+  920  ls
+  921  cd .
+  922  cd ..
+  923  cd ~
+  924  cd playbook
+  925  mkdir playbook
+  926  ls
+  927  vi isilon_health_check.yml
+  928  ansible-playbook isilon_health_check.yml --check-syntax
+  929  ansible-playbook isilon_health_check.yml --syntax-check
+  930  ansible-playbook -i hosts.ini isilon_health_check.yml --syntax-check
+  931  file hosts.ini
+  932  cat -A hosts.ini  # Shows hidden characters
+  933  ls -l hosts.ini
+  934  ansible-playbook -i hosts.ini isilon_health_check.yml
+  935  ansible-playbook isilon_health_check.yml
+  936  vi hosts.ini
+  937  ansible-playbook -i hosts.ini isilon_health_check.yml
+  938  curl -k -u root:a https://10.241.92.46/platform/1/cluster/config
+  939  ssh root@10.241.92.46
+  940  curl -k -u root:a https://10.241.92.46/platform/1/cluster/config
+  941  ansible-playbook -i hosts.ini isilon_health_check.yml
+  942  telnet 10.241.92.46  443
+  943  telnet 10.241.92.46  8080
+  944  ls playbook/
+  945  ls
+  946  vi isilon_health_check.yml
+  947  ansible-playbook -i hosts.ini isilon_health_check.yml
+  948  ansible-playbook -i hosts.ini isilon_health_check.yml -vvvv
+  949  ls playbook/
+  950  vi isilon_health_check.yml
+  951  ansible-playbook -i hosts.ini isilon_health_check.yml --check-syntax
+  952  ansible-playbook -i hosts.ini isilon_health_check.yml
+  953  ansible-playbook -i hosts.ini isilon_health_check.yml --check-syntax
+  954  vi isilon_health_check.yml
+  955  ansible-playbook -i hosts.ini isilon_health_check.yml --check-syntax
+  956  ansible-playbook -i hosts.ini isilon_health_check.yml
+  957  vi isilon_health_check.yml
+  958  ansible-playbook -i hosts.ini isilon_health_check.yml --check-syntax
+  959  ansible-playbook -i hosts.ini isilon_health_check.yml
+  960  vi isilon_health_check.yml
+  961  ansible-playbook -i hosts.ini isilon_health_check.yml
+  962  df -k
+  963  df -h
+  964  cd /mnt/jiratee/
+  965  cd PFEE/0014000-0014999/PFEE-14557/2025-08-29_15-34/wh-0000053523/diag_coll/
+  966  ls
+  967  cd sar_analyze_out/
+  968  ls
+  969  cd sar_analyze_out/
+  970  ls
+  971  ls -l
+  972  ls -a
+  973  cd ..
+  974  ls
+  975  sar -n ETCP -f sar.0 | less
+  976  gunzip *
+  977  ls
+  978  less wh-0000053523.out
+  979  sar -n ETCP -f sar.1.Fri_Aug_29_2025__13.25.18 | less
+  980  sar -n ETCP -f sar.2.Fri_Aug_29_2025__13.25.18 | less
+  981  sar -n ETCP -f sar.2.* | less
+  982   pwd
+  983  cd ../../..
+  984  ls
+  985  cat wh-0000053523/server/ho
+  986  cat wh-0000053523/server/uname.txt
+  987  cat wh-0000053523/server/uname.txt  | egrep wh
+  988  cd ..
+  989  ls
+  990  cd 2025-08-29_15-34/
+  991  ls
+  992  cd wh-000005352
+  993  ls
+  994  cd wh-0000053523/
+  995  cd diag_coll/
+  996  ls
+  997  cd sar_analyze_out/
+  998  ls
+  999  less sar_analyze_out/.out
+ 1000  ansible --version
+ 1001  ansible all --list-hosts
+ 1002  vi hosts
+ 1003  ls
+ 1004  rm r epel-release-8-22.el8.noarch.rpm
+ 1005  ls
+ 1006  cat hosts
+ 1007  cat hosts.ini
+ 1008  cat hosts
+ 1009  vi hosts
+ 1010  rm hosts
+ 1011  ls
+ 1012  rm r hosts.ini
+ 1013  cd /etc/ansible/
+ 1014  ls
+ 1015  vi hosts
+ 1016  cd ..
+ 1017  ansible all -m ping
+ 1018  ls
+ 1019  cd tmp
+ 1020  ls
+ 1021  cd etc
+ 1022  cd /etc
+ 1023  ls
+ 1024  ls -lh epel-release-latest-8.noarch.rpm
+ 1025  cd /
+ 1026  ls -lh epel-release-latest-8.noarch.rpm
+ 1027  cd ~
+ 1028  ls -lh epel-release-latest-8.noarch.rpm
+ 1029  ls
+ 1030  cp create_isilon_shares.yml playbook
+ 1031   cp create_powerstore_luns.yml playbook/
+ 1032  cd playbook/
+ 1033  ls
+ 1034  ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1035  pip install requests
+ 1036  python3.12 -m ensurepip --upgrade
+ 1037  ansible-galaxy collection install dellemc.powerstore
+ 1038  ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1039  ansible-galaxy collection list | grep powerstore
+ 1040  ANSIBLE_COLLECTIONS_PATHS=/root/.ansible/collections ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1041  ls
+ 1042  vi create_powerstore_luns.yml
+ 1043  ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1044  vi create_powerstore_luns.yml
+ 1045  ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1046  ansible-galaxy collection list | grep dellemc.powerstore
+ 1047  collections_paths = /root/.ansible/collections:/usr/share/ansible/collections
+ 1048  vi /etc/ansible/ansible.cfg
+ 1049  ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1050  vi /etc/ansible/ansible.cfg
+ 1051  ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1052  ansible-playbook create_powerstore_luns.yml --syntax-check -vvv
+ 1053  ls /root/.ansible/collections/ansible_collections/dellemc/powerstore/plugins/modules/ | grep volume
+ 1054  vi create_powerstore_luns.yml
+ 1055  ansible-playbook create_powerstore_luns.yml --syntax-check -vvv
+ 1056  vi create_powerstore_luns.yml
+ 1057  ansible-playbook create_powerstore_luns.yml --syntax-check -vvv
+ 1058  ls -l /root/.ansible/collections/ansible_collections/dellemc/powerstore/plugins/modules/powerstore_volume.py
+ 1059  [root@r630165254 playbook]# ls -l /root/.ansible/collections/ansible_collections/dellemc/powerstore/plugins/modules/powerstore_volume.py
+ 1060  ls: cannot access '/root/.ansible/collections/ansible_collections/dellemc/powerstore/plugins/modules/powerstore_volume.py': No such file or directory
+ 1061  [root@r630165254 playbook]#
+ 1062  rm -rf /root/.ansible/collections/ansible_collections/dellemc/powerstore
+ 1063  ansible-galaxy collection install dellemc.powerstore --force
+ 1064  ls -l /root/.ansible/collections/ansible_collections/dellemc/powerstore/plugins/modules/ | grep powerstore_volume
+ 1065  cd ..
+ 1066  ansible-galaxy collection install /root/dellemc-powerstore-3.8.0.tar.gz --force
+ 1067  ls -l /root/.ansible/collections/ansible_collections/dellemc/powerstore/plugins/modules/ | grep powerstore_volume
+ 1068  tar -tzf /root/dellemc-powerstore-3.8.0.tar.gz | grep powerstore_volume.py
+ 1069  ansible-doc -l | grep powerstore
+ 1070  cdpl
+ 1071  cd playbook/
+ 1072  vi create_powerstore_luns.yml
+ 1073  ansible-playbook create_powerstore_luns.yml --syntax-check
+ 1074  history
+[root@r630165254 playbook]#
