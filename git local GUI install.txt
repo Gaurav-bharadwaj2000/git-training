@@ -1,0 +1,16 @@
+link-https://about.gitlab.com/install/
+
+# Download the bash script to prepare the repository
+curl --silent "https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh" | sudo bash
+
+# Download the gitlab-ee package and dependencies to /var/cache/apt/archives
+sudo apt-get install --download-only gitlab-ee
+
+# Copy the contents of the apt download folder to a mounted media device
+sudo cp /var/cache/apt/archives/*.deb /path/to/mount
+
+# Go to the physical media device
+sudo cd /path/to/mount
+
+# Install the dependency packages
+sudo dpkg -i <package_name>.deb
