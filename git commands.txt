@@ -1,0 +1,32 @@
+🛠️ Basic Git Workflow
+
+
+Initialize a repo
+git init
+
+
+Check status
+git status
+
+
+Add files to staging
+git add filename
+
+
+Commit changes
+git commit -m "Your message"
+
+
+Connect to remote repo
+git remote add origin <repo-url>
+
+
+Push changes
+git push origin main
+
+
+Pull updates
+git pull origin main
+
+Pull updates
+git pull origin main
